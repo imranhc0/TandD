@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code|Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truth And Dare</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #game {
+      height: 500px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+    .truthndare {
+      height: 300px;
+      width: 500px;
+      box-sizing: border-box;
+      border: 2px solid orange;
+      border-radius: 50px;
+      text-align: center;
+      align-items: center;
+    }
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      font-family: "Secular One", sans-serif;
+      font-size: 45px;
+      font-weight: bold;
+    }
+    h1 {
+      font-family: sans-serif;
+      margin: 0px 30px;
+      padding: 15px;
+      border: 2px solid orangered;
+      border-radius: 50px;
+      margin-bottom: 15px;
+    }
+    button {
+      margin: 20px 20px;
+      padding: 20px;
+      background-color: orangered;
+      border: 2px solid orangered;
+      border-radius: 50px;
+      color: honeydew;
+      cursor: pointer;
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      outline: none;
+      margin-bottom: 20px;
+    }
+    #footer {
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      font-size: 80%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100;
+      bottom: 0;
+    }
+    #footer h3 {
+      font-family: "Fira Code", monospace;
+    }
+  </style>
+
+  <body>
+    <div id="game">
+      <div class="truthndare">
+        <h2>Truth and Dare</h2>
+        <h1 id="root">Result Here...</h1>
+        <button onclick="myFunction()">Play Game</button>
+        <button onClick="window.location.reload(); ">Refresh Page</button>
+      </div>
+    </div>
+    <div id="footer">
+      <h3>Made With ❤️️ Imran</h3>
+    </div>
+
+    <script>
+      function myFunction() {
+        let rand = Math.floor(Math.random() * 100);
+
+        if (rand % 2 === 0) {
+          console.log(rand);
+          document.getElementById("root").innerHTML = "Dare";
+        } else {
+          console.log(rand);
+          document.getElementById("root").innerHTML = "Truth";
+        }
+      }
+    </script>
+  </body>
+</html>
